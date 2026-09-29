@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Urban Parking Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">P</div>
+    <div>
+      <h1>SmartPark</h1>
+      <span>Urban Parking Intelligence</span>
+    </div>
+  </div>
+  <div class="live"><span class="dot"></span> SYSTEM LIVE</div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">SMART CITY • REAL-TIME ANALYTICS</p>
+      <h2>Smart Urban Parking<br><span>Management System</span></h2>
+      <p class="hero-text">Monitor parking occupancy, allocate spaces dynamically, and make data-driven decisions from one intelligent dashboard.</p>
+      <div class="actions">
+        <button onclick="scrollToSection('parking')">View Live Parking</button>
+        <button class="secondary" onclick="scrollToSection('architecture')">System Architecture</button>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="ring" id="occupancyRing"><strong id="occupancyValue">72%</strong><small>occupancy</small></div>
+      <div>
+        <b>City Center Zone</b>
+        <p>Dynamic allocation active</p>
+        <span class="status">● Optimizing spaces</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" id="analytics">
+    <div class="stat"><span>Total Spaces</span><strong id="total">120</strong><small>Across monitored zones</small></div>
+    <div class="stat"><span>Available Now</span><strong id="available">34</strong><small class="positive">● Ready to allocate</small></div>
+    <div class="stat"><span>Occupied</span><strong id="occupied">86</strong><small>Real-time count</small></div>
+    <div class="stat"><span>Avg. Parking Time</span><strong><span id="avgTime">47</span> min</strong><small>Today's average</small></div>
+    <div class="stat"><span>Today's Revenue</span><strong>₹<span id="revenue">18,450</span></strong><small>Automated collection</small></div>
+  </section>
+
+  <section class="panel" id="parking">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">LIVE MONITORING</p>
+        <h3>Parking Space Map</h3>
+      </div>
+      <div class="legend">
+        <span><i class="free"></i> Available</span>
+        <span><i class="busy"></i> Occupied</span>
+        <span><i class="reserved"></i> Reserved</span>
+      </div>
+    </div>
+    <div class="parking-grid" id="parkingGrid"></div>
+  </section>
+
+  <section class="two-col">
+    <div class="panel">
+      <p class="eyebrow">DYNAMIC ALLOCATION</p>
+      <h3>Intelligent Space Allocation</h3>
+      <div class="allocation">
+        <div class="allocation-item"><b>Priority</b><span>Emergency & accessible vehicles</span></div>
+        <div class="allocation-item"><b>Distance</b><span>Nearest suitable space</span></div>
+        <div class="allocation-item"><b>Demand</b><span>Load balancing by zone</span></div>
+        <div class="allocation-item"><b>Reservation</b><span>Pre-booked spaces protected</span></div>
+      </div>
+    </div>
+
+    <div class="panel" id="architecture">
+      <p class="eyebrow">ARCHITECTURE</p>
+      <h3>System Flow</h3>
+      <div class="flow">
+        <div>IoT Sensors</div><b>→</b><div>C Server / API</div><b>→</b><div>Database</div><b>→</b><div>Dashboard</div>
+      </div>
+      <p class="muted">The C server in this demo provides the HTTP API and serves the dashboard files.</p>
+    </div>
+  </section>
+
+  <section class="panel requirements">
+    <p class="eyebrow">MILESTONE 1</p>
+    <h3>Requirement Analysis & Architectural Design</h3>
+    <div class="req-grid">
+      <article><b>01</b><h4>Stakeholders</h4><p>Drivers, parking operators, city administrators and maintenance teams.</p></article>
+      <article><b>02</b><h4>Functional Requirements</h4><p>Track occupancy, reserve spaces, allocate dynamically and show analytics.</p></article>
+      <article><b>03</b><h4>Database</h4><p>Store spaces, vehicles, reservations, sensor events and payment records.</p></article>
+      <article><b>04</b><h4>API</h4><p>Expose real-time parking status and allocation data to web or mobile clients.</p></article>
+    </div>
+  </section>
+
+  <footer>
+    <span>SmartPark • C-based web server demonstration</span>
+    <span>Last update: <b id="lastUpdate">--:--:--</b></span>
+  </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
